@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+        <title>「欧路词典」英汉-汉英词典</title>
+    <link rel="icon" href="/Images/en/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="/Images/en/apple_icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-itunes-app" content="app-id=570118289">
+    <link href="/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/css/bundles.min.css?v=Owr9J8EmsZqxab8fO2fS7xCq8QJm6ChVKVYmoMEc9Rw" rel="stylesheet">
+    <script src="/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="/Scripts/jquery-ui-1.9.0.min.js"></script>
+    <script src="/js/dictjs.min.js?v=8podXKyMiyb_VGL8OgtPxe84wdETDLFD1GEeLvEFplQ"></script>
+    
+    
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+</head>
+    <body class="en">
+        <header>
+            <div id="header">
+                <div class="header-content">
+                    <div id="login">
+                                <ul id="loginForm-ul">
+            <li><a data-dialog-title="注册" href="/Account/Register" id="registerLink">注册</a></li>
+            <li class="sep"><i></i></li>
+            <li><a data-dialog-title="身份识别" href="/Account/Login" id="loginLink">登录</a></li>
+        </ul>
+
+                    </div>
+                    <nav>
+                        <ul class="nav-bar">
+    <li><a id="language-selector" class="flag-en" class="home">欧路词典▼</a>
+        <ul id="diclists" style="display:none;" class="menu">
+            <li><a href="/Account/ChangeSiteLanguage?langid=fr" class="flag-fr" rel="nofollow"><span class="diclists_txt">法语助手</span></a></li>
+            <li><a href="/Account/ChangeSiteLanguage?langid=de" class="flag-de" rel="nofollow"><span class="diclists_txt">德语助手</span></a></li>
+            <li><a href="/Account/ChangeSiteLanguage?langid=es" class="flag-es" rel="nofollow"><span class="diclists_txt">西语助手</span></a></li>
+            <li><a href="/Account/ChangeSiteLanguage?langid=en" class="flag-en" rel="nofollow"><span class="diclists_txt">欧路英语</span></a></li>
+        </ul>
+    </li>
+    <li><a class="dict" href="/">在线词典</a></li>
+<li><a class="software" href="//www.eudic.net">欧路词典软件</a></li>
+<li><a class="mobile-software" href="http://www.eudic.net/eudic/android.aspx">手机版</a></li>
+<li><a class="resource" href="/ting">每日英语听力</a></li>
+<li><a class="course" href="//dict.eudic.net/course">英语课堂</a></li>
+<li><a class="software" href="//www.eudic.net/v4/en/app/recite">欧路背单词</a></li>
+    <div id="qod"><a href="#" title="发音" class="voice-js voice-button" data-rel="langid=en&txt=QYNSSBhbSBhIHNsb3cgd2Fsa2VyLCBidXQgSSBuZXZlciB3YWxrIGJhY2su&voicename=human_normal"></a><a href=http://dict.eudic.net/home/dailysentence/ea305e67-a954-4848-b7d4-4d96cf5c9224 target=_blank>每日一句：I am a slow walker, but I never walk back.</a></div>
+</ul>
+<div id="soundPlayer"></div>
+                    </nav>
+                </div>
+            </div>
+            
+
+        </header>
+        <div id="body" style="min-height: 110%">
+            
+<div id="head-bk"></div>
+<div id="head-bar">
+    <div id="header-search">
+        <a id="header-logo" href="/"><img src="/Images/en/logo-large.png" width="174px" height="53px" /></a>
+<form action="/" id="searchForm" method="post" name="searchForm">            <div id="search-box" class="searchBar">
+                <span class="sp-search-input">
+                    <span class="sp_input_placeholder shared">支持英汉-汉英词典查询 英语例句搜索</span>
+                    <input type="text" autocomplete="off" class="search-input" id="dic-input" name="inputword" value="我就是长句子"/>
+                    <div class="typelist">
+                        <span data-type="search_dict" class="cur-search-type">词典</span>
+                        <div id="select-type-box">
+                            <span class="typeone" data-type="search_liju">例句</span>
+                            <span class="typetwo" data-type="search_cg">变位</span>
+                        </div>
+                    </div>
+                </span>
+                <span class="sp-search-button"><input type ="submit" class="search-button" value ="查 找"/></span>
+                
+            </div>
+            <input type="hidden" id="searchtype" name="searchtype" value="search_dict"/>
+            <input type="hidden" id="recordid" name="recordid"/>
+            <input type="hidden" id="forcecg" name="forcecg" value="false"/>
+            <input type="hidden" id="cgformidx" name="cgformidx" value="0" />
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8NpCzUnD6y5Lh0uQHdxlVqseavIJMNmLZtXk3igwgDkDeQzPiVTZcWazFdVpVOajGjHHPOvpTFQcMSHHDHmJCnnlIiNKC_cWzsnk8IEmFBMpfhAL6AYPOaoFV_kVbSzYD5YeGGutMx5CpEsRyeHuuJs" /></form><style type="text/css">
+#DTtopMA--{ 
+     margin: 0;
+     display: inline-block;
+     width: 300px;
+     vertical-align: top;
+     position: absolute;
+     right: 0;
+     top: 15px;
+     font-size:14.7px;
+ }   
+ #DTtopMA-- b {
+    font-weight: normal;
+ }
+
+#DTsubMA-- {
+     height: 40px;
+     font-size: 14.7px; 
+    background-color: #F8FBFD;
+ }
+#DTsubMA-- .content {
+    margin:0 auto; 
+    max-width: 1200px;
+    min-width: 800px;
+    padding: 10px;
+    vertical-align: central;
+}
+#DTsubMA-- .content a {
+    margin-left: 20px;
+}
+</style>
+        <span id="DTtopMA--"></span>
+    </div>
+</div>
+<script>
+    $(function () {
+        initSearchBar();
+        initautocomplete();
+    });
+</script>
+<input type="hidden" id="page-status" value="QYNK1loRmNNV1l2bFg5VDVWdFFBRUEtLTErQUVBLS05OTk5K0FFQS0tOTk5K0FFQmlFVnd4WmkrVmYxUGxXMUEtAV-" lang="en" word="我就是长句子">
+<div id="bodycontent">
+    
+
+<style type="text/css">
+#DRMA-- { 
+    width: 300px; 
+    float:right;
+    *margin-left: 20px;
+    margin-right:-315px;
+    _margin-right: -160px;
+    position:relative;
+}
+#DRMA-- a {
+    font-size: 14.7px;
+} 
+
+.CRMA--{
+    color:#999999;
+}
+
+ #head-ad-barSub {
+     background-color: #F8FBFD;
+     height: 40px;
+     font-size: 14.7px; 
+ }
+#head-ad-barSub .content {
+    margin:0 auto; 
+    max-width: 1200px;
+    min-width: 800px;
+    padding: 10px;
+    vertical-align: central;
+}
+#head-ad-barSub .content a {
+    margin-left: 20px;
+}
+</style>
+<div id="DRMA--">
+    <div id="scrollToTop">
+    <a id="topBtn" title="返回页面顶部"></a>
+    <a id="weiboBtn" href="http://www.weibo.com/eudic" target="_blank" title="关注「欧路词典」微博"></a>
+    <a id="downloadBtn" href="http://www.eudic.net/eudic/iphone.aspx" title="下载「欧路词典」手机版" target="_blank"></a>
+    <a id="improveBtn" href="http://www.francochinois.com/Support/question.aspx" target="_blank">[+反馈]</a>
+    <ul class="qrImg">
+        <li class="weixinImg"><img alt="微信二维码" /><p>关注我们的微信</p></li>
+        <li class="dictImg"><img src="https://static.frdic.com/app/qr_eudic_en.png" alt="手机客户端二维码" /><p>下载手机客户端</p></li>
+    </ul>
+    <script type="text/javascript">
+        if ($('#page-status').attr('lang') == 'en') {
+            $('.weixinImg').css({
+                'display': 'none'
+            });
+            $('.qrImg').css({
+                'width': '110px'
+            });
+        }
+        $('#downloadBtn').hover(function () {
+            $('.qrImg').show();
+        }, function () {
+            $('.qrImg').hide();
+        });
+        $('#scrollToTop #topBtn').click(function () {
+        console.log("33222")
+        window.scrollTo(0, 0);
+        $(this).fadeOut();
+    });
+    </script>
+</div>
+   
+
+    <div class="CRMA--">赞助商链接</div>
+    <!--No_Ads_Block-->
+<p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- new_webdict -->
+    <ins class="adsbygoogle"
+         style="display:block;margin-left:0 !important;"
+         data-ad-client="ca-pub-0793094289113041"
+         data-ad-slot="6124063617"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+</p>
+    
+</div>
+    <input type="hidden" id="page-status" value="QYNK1loRmNNV1l2bFg5VDVWdFFBRUEtLTErQUVBLS05OTk5K0FFQS0tOTk5K0FFQmlFVnd4WmkrVmYxUGxXMUEtAV-" lang="en">
+    <div id="dict-body" class="dict-body-main">
+        <div class="infobox ysjj" style="padding:20px;display:none;">
+            <div class="title"><h3 class="ysjjicon">与时俱进汉法双向翻译词典</h3></div>
+            <h3 class="queryWord">我就是长句子</h3>
+            <div id="ysjj" onselectstart="return false">正在查找中......</div><p class="getMore"><span><img src="/Images/common/loading.gif" />查找更多解释</span><a class="uk-button">获得更多解释</a></p>
+        </div>
+        <div class="dicBox">                    
+            <div class="infobox" style="margin-top: 50px;">
+                <div class="title"><h3>搜索结果</h3></div>
+                <div class="content">
+                    <div id="dict_trans" class="explain_wrap">
+                        <div class="expHead">
+                            <a onClick="expandIt('dict_trans');return false;" href="#"><img src="/Images/common/collapse.gif" class="imgEx" id="dict_transImg" />参考译文</a>
+                        </div>
+                        <div id="dict_transChild" class="expDiv">
+                            <div class="dict-body">
+                                <div id="tbOrgText" class="explain_wrap">我就是长句子<a href="#" title="真人发音" class="voice-js voice-button" data-rel=""></a></div>
+                                <div id="tbTransResult" class="explain_wrap"><span style="color:#004BD2"></span><a href="#" title="真人发音" class="voice-js voice-button" data-rel=""></a></div>
+                                    <div class="explain_wrap"><a href="#submit_newword" style="color:gray; font-size:0.8em;">帮助我们改进翻译结果</a></div>
+                            </div>
+                            <select id="sel-srcLang" style="display:none">
+                                <option value="auto">自动检测</option>
+                                <option value="zh-CN">中文</option>
+                                <option value="en">英语</option>
+                                <option value="fr">法语</option>
+                                <option value="de">德语</option>
+                                <option value="es">西班牙语</option>
+                            </select>
+                            <select id="sel-destLang" style="display:none">
+                                <option value="zh-CN">中文 （简体）</option>
+                                <option value="zh-TW">中文 （繁体）</option>
+                                <option value="en">英语</option>
+                                <option value="fr">法语</option>
+                                <option value="de">德语</option>
+                                <option value="es">西班牙语</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+                <div class="infobox" style="margin-top: 50px;">
+                    <div class="title"><h3>智能搜索建议，您是不是要查找以下近似单词：</h3></div>
+                    <div class="content suggestion-list">  <ul></ul><!--sug--><ul id='lucene-list'><li><a href='topic sentence' target='_blank'>topic sentence</a><span class='lucene-highlight'>课题<b>句子</b>，主题<b>句子</b></span></li><li><a href='nonsentence' target='_blank'>nonsentence</a><span class='lucene-highlight'>n. 非<b>句子</b></span></li><li><a href='sentence structure' target='_blank'>sentence structure</a><span class='lucene-highlight'><b>句子</b>结构；语句结构</span></li><li><a href='inspector general' target='_blank'>inspector general</a><span class='lucene-highlight'>n. 监察<b>长</b>；检查<b>长</b></span></li><li><a href='rhomboidal' target='_blank'>rhomboidal</a><span class='lucene-highlight'>adj. <b>长</b>斜方形的,<b>长</b>菱形的</span></li><li><a href='viz' target='_blank'>viz</a><span class='lucene-highlight'>adv. 即；<b>就是</b></span></li><li><a href='allophrase' target='_blank'>allophrase</a><span class='lucene-highlight'>n. 短语变体,语段变体,<b>句子</b>变体</span></li><li><a href='churner' target='_blank'>churner</a><span class='lucene-highlight'>n. 手持式<b>长</b>钎子；手摇式<b>长</b>钻；搅乳器</span></li><li><a href='changbaiite' target='_blank'>changbaiite</a><span class='lucene-highlight'><b>长</b>白石</span></li><li><a href='dolichosigmoid' target='_blank'>dolichosigmoid</a><span class='lucene-highlight'><b>长</b>乙状结肠</span></li><li><a href='Dolichothoraci' target='_blank'>Dolichothoraci</a><span class='lucene-highlight'><b>长</b>胸目</span></li><li><a href='espagnolette' target='_blank'>espagnolette</a><span class='lucene-highlight'><b>长</b>插销</span></li><li><a href='fire chief' target='_blank'>fire chief</a><span class='lucene-highlight'>消防队<b>长</b></span></li><li><a href='havener' target='_blank'>havener</a><span class='lucene-highlight'>港务<b>长</b></span></li><li><a href='long-day' target='_blank'>long-day</a><span class='lucene-highlight'><b>长</b>日照</span></li><li><a href='long-focus' target='_blank'>long-focus</a><span class='lucene-highlight'><b>长</b>焦距</span></li><li><a href='single-length' target='_blank'>single-length</a><span class='lucene-highlight'>单字<b>长</b></span></li><li><a href='sweat pants' target='_blank'>sweat pants</a><span class='lucene-highlight'><b>长</b>运动裤</span></li><li><a href='trumpetmajor' target='_blank'>trumpetmajor</a><span class='lucene-highlight'>号兵<b>长</b></span></li><li><a href='sentential' target='_blank'>sentential</a><span class='lucene-highlight'>adj. <b>句子</b>的,判决的,判决上的</span></li><li><a href='submember' target='_blank'>submember</a><span class='lucene-highlight'>n. (<b>句子</b>的)次(要)成分</span></li><li><a href='dolichokerkic' target='_blank'>dolichokerkic</a><span class='lucene-highlight'><b>长</b>前臂的</span></li><li><a href='dolichopelvic' target='_blank'>dolichopelvic</a><span class='lucene-highlight'><b>长</b>骨盆的</span></li><li><a href='Echinometridae' target='_blank'>Echinometridae</a><span class='lucene-highlight'><b>长</b>海胆科</span></li><li><a href='inaxon' target='_blank'>inaxon</a><span class='lucene-highlight'><b>长</b>轴索细胞</span></li></ul></div>
+                </div>
+            <div class="infobox" style="margin-top: 50px;">
+                <div class="title"><h3>提交新单词</h3></div>
+                <div class="content"> 
+                    <a name="submit_newword"></a>
+                    <form id="submitNW" method="POST" action="/Dicts/NewWordSuggestion">
+                        <ul>                 
+                            <li>
+                                <label for="sug-word">词条：</label><span class="error" style="display: none;">请填写词条名</span>
+                                <input type="text" id="sug-word" name="sug-word" class="text-input" value="我就是长句子" />
+                            </li>
+                            <li>
+                                <label for="sug-exp">建议释义：</label><span class="error" style="display: none;">请填写建议的释义</span>
+                                <textarea id="sug-exp" name="sug-exp" class="cf-desc"></textarea>
+                            </li>
+                            <li>
+                                <label for="sug-where">单词出处或所在的句子：</label>
+                                <textarea id="sug-where" name="sug-where" class="cf-desc"></textarea>
+                            </li>
+                            <li><input type="submit" value="提交" class="blue-button" /><span id="sug-error" class="error"></span></li>
+                        </ul>
+                    </form>  
+                    <div id="submit-success"><img src="//static.frdic.com/img/dlg_ok.jpg" alt="您的建议提交成功" /><h3>您的建议提交成功。</h3>
+                        <div><b>单词：</b>我就是长句子</div>
+                        <div><b>参考释义：</b><span id="lb-sug-exp"></span></div>
+                    </div>
+                    <div class="snw-tip">
+                        <dl><dt><b>提示：</b></dt><dd>如果您希望「欧路词典」收录该词条，请向我们提供相关信息。<br /><br />提交新单词时，建议给出单词出处和语境，这样我们的编辑可以更准确地给出翻译。
+                            <br /><br />我们会有专人审核提交的内容，请勿提交垃圾信息。</dd></dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+        //googletrans('我就是长句子');
+            $('#submitNW input[type="submit"]').click(function (ev) {
+                $('#sug-word, #sug-exp').each(function () {
+                    if ($(this).val().replace(/\s*/, '') == '') {
+                        $(this).prev().show();
+                        ev.preventDefault();
+                    }
+                });
+            });
+
+            var frm = $('#submitNW');
+            frm.submit(function () {
+                $.ajax({
+                    type: frm.attr('method'),
+                    url: frm.attr('action'),
+                    data: frm.serialize(),
+                    success: function (data) {
+                        if (data == "ok") {
+                            $('#submit-success').show();
+                            $('#submitNW').hide();
+                            $('#lb-sug-exp')[0].innerHTML = $('#sug-exp')[0].value + '<br />' + $('#sug-where')[0].value;
+                        } else {
+                            $('#sug-error')[0].innerHTML = data;
+                        }
+                    }
+                });
+                return false;
+            });
+        </script>
+
+        <script>
+            $(function () {
+
+                $('#sel-srcLang').val('auto');
+                $('#sel-destLang').val('en');
+                ajaxTranslate();
+                $('#liju_dict_loadmore').live('click', function () {
+                    queryMore($(this), 'lj_div');
+                });
+                $('#liju_ting_loadmore').live('click', function () {
+                    queryMore($(this), 'lj_ting');
+                });
+            });
+        </script>
+    </div>
+</div>
+        </div>
+<footer>
+    <div id="footer">
+        <div class="nav-bar">
+            <a href="http://dict.eudic.net/Home/Ads">广告联系</a><span class="sp">|</span>
+                 <a href="http://www.eudic.net/Support/question.aspx">意见反馈</a><span class="sp">|</span>
+                 <a href="http://www.eudic.net/Company/relation.aspx">合作伙伴</a><span class="sp">|</span>
+                 <a href="http://www.eudic.net/Company/about.aspx">关于欧路在线词典</a><span class="sp">|</span><a href="http://dict.eudic.net/Home/SwitchView?mobile=True&amp;returnUrl=%2F" rel="external">手机版网站</a> <span class="sp">|</span> <a href="/dicts/hotwords">英语热词榜</a><span class="sp">|</span> <a href="https://dict.eudic.net">HTTPS</a>
+                 <span class="copyright">欧路软件 ©2022 词库版本20220214 <a href="http://beian.miit.gov.cn">沪ICP备08016489号</a>  沪公网安备 31011602001726号</span>
+        </div>
+    </div>
+</footer>
+<script>
+    $(function () {
+        $("#soundPlayer").ubaPlayer();
+    });
+</script>     	  
+       <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-103727-5']);
+  _gaq.push(['_setDomainName', 'eudic.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = '/scripts/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    </body>
+</html>
